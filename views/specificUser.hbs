@@ -1,0 +1,34 @@
+<head>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<h1>User Information:</h1>
+<h2>UserID: {{UserId}}</h2>
+<h2>First Name: {{FirstName}}</h2>
+<h2>Last Name: {{LastName}}</h2>
+<h2>Username: {{Username}}</h2>
+<h2>Password: {{Password}}</h2>
+<h2>Admin User?: {{AdminUser}}</h2>
+<h2>Creation Date: {{CreationDate}}</h2>
+<h2>Last Updated: {{UpdatedDate}}</h2>
+<h2>Deleted?: {{Deleted}}</h2>
+
+<script>
+    function onDelete() {
+        $.ajax({
+            url:  '/users/{{UserId}}/delete',
+            method: 'DELETE', complete: () => window.location = "/users"
+        })
+    }
+</script>
+
+<div>
+    <button onclick="onDelete()" id="deleteButton">Delete User</button>
+</div>
+
+<div>
+    </br>
+    </br>
+    <a href='/users'>Back to User List</a>
+</div>
