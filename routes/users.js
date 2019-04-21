@@ -36,10 +36,11 @@ router.get('/login', function(req, res, next) {
 });
 
 router.post('/login', passport.authenticate('local', {
-  failureRedirect: '/users/login'
+  failureRedirect: '/users/login',
 }),
 function (req, res, next) {
-  res.redirect('profile/' + req.user.UserId);
+  res.redirect('profile/' + req.user.UserId)
+  
 }
 );
 
