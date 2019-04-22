@@ -15,7 +15,7 @@ class Landing extends Component {
               passport and JWTs
             </p>
             <br />
-            {/* <a
+            <a
               style={{
                 width: "150px",
                 borderRadius: "3px",
@@ -35,7 +35,7 @@ class Landing extends Component {
               className="btn btn-large waves-effect white hoverable black-text"
             >
               Log In
-            </a> */}
+            </a>
           </div>
         </div>
       </div>
